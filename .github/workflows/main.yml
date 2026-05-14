@@ -1,4 +1,4 @@
-name: Docker Build Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -17,5 +17,5 @@ jobs:
       - name: Build Docker Image
         run: docker build -t git-practice:v1 .
 
-     - name: Verify Docker Images
+      - name: Verify Docker Images
         run: docker images
