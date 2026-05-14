@@ -11,5 +11,11 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
+      - name: Check Repository
+        run: ls -la
+
       - name: Build Docker Image
         run: docker build -t git-practice:v1 .
+
+     - name: Verify Docker Images
+        run: docker images
